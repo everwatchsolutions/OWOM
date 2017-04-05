@@ -1,21 +1,21 @@
 # One World of Minerals project from USGS
-*1. Sign up for a Bluemix free trial account if needed.
+**1. Sign up for a Bluemix free trial account if needed.**
 
-    Go to bluemix.net and click Create a free account 
+>1. Go to bluemix.net and click Create a free account 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.44.44.png)
+>2. Fill out the registration form and click the Create Account button.
+>3. You'll receive a verification e-mail which contains a link to activate your account.
 
-    Fill out the registration form and click the Create Account button.
+**2. Login to Bluemix**
 
-    You'll receive a verification e-mail which contains a link to activate your account.
-
-*2. Login to Bluemix
-
-    Go to bluemix.net and click the Log in button 
-
-    Provide your username and click the Continue button 
-
-    Provide your password and click the Log in button 
-
-*3. Create an IBM Data Connect Instance  (Michael F)
+>1. Go to bluemix.net and click the Log in button 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.44.59.png)
+>2. Provide your username and click the Continue button 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.46.16.png)
+>3. Provide your password and click the Log in button 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.46.42.png)
+    
+**3. Create an IBM Data Connect Instance**
 
     Once logged into Bluemix, go to the Bluemix Catalog by clicking the Catalog button in the upper right  corner or going to bluemix.net/catalog 
 
@@ -25,7 +25,7 @@
 
     On the service description page for your new Data Connect instance, click the Manage tab then click on the Launch button to launch the Data Connect dashboard. 
 
-*4. Replicate data normalization work in IBM Data Connect
+**4. Replicate data normalization work in IBM Data Connect**
 
     In the Data Connect dashboard, click on File Storage in the menu on the left side of the screen.
 
@@ -78,7 +78,7 @@
     Your new JSON file should be listed in File Storage. Download it by mousing over the file name and clicking on the download icon.  This is the file you will load into Elasticsearch.
 
 
-*5. Create Elasticsearch Instance on Bluemix*
+**5. Create Elasticsearch Instance on Bluemix**
 
 1.  From your IBM Bluemix Dashboard, scroll down until you see a blue button labeled "Create Service" towards the right side of the page and click it.
 
@@ -86,7 +86,7 @@
 
 3.  From this creation page, you can "Connect To" your other IBM Bluemix Applications.  Once you've chosen a Service and Credential name, click the "Create Button" in the lower right corner.
 
-*6. Stand up Kibana instance pointing to Elasticsearch*
+**6. Stand up Kibana instance pointing to Elasticsearch**
 
 Kibana is an open source plugin for Elasticsearch that will allow us to visual our data.  Note that at the current time, Kibana is not a default service available on Bluemix, so we will have to upload our own docker image for this application.
 
@@ -96,13 +96,13 @@ Kibana is an open source plugin for Elasticsearch that will allow us to visual o
 If you don't have a docker image for Kibana, you can find one here: https://hub.docker.com/_/kibana/
 Note:  You may need to configure your Kibana image's environment variables to point towards your Elasticsearch instance.  Information about editing docker files can be found here: https://docs.docker.com/engine/reference/builder/
 
-*7. Create an index in Elasticsearch*
+**7. Create an index in Elasticsearch**
 
 In our case, Elasticsearch will be automatically indexing our data for us on upload based on the "index name" we choose in our CURL request to post the data.
 
 For advanced users who want to know more about creating their own indexes, please refer to the elastic documentation here: https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html
 
-*8. Format json data & load into Elasticsearch*
+**8. Format json data & load into Elasticsearch**
 
 To format our data correctly, we can use a library called JQ, downloaded from here: https://stedolan.github.io/jq/
 
@@ -122,7 +122,7 @@ curl -u username:password -XPOST 'https://url_for_elastic_search:port/index_name
 The --insecure command is only needed when running services with self-signed CA certificates.
 
 
-*9. Create a basic visualization in Kibana*
+**9. Create a basic visualization in Kibana**
 
 1.  Access the kibana dashboard by going to the public IP and port you assigned for it when creating the container.  Example xxx.xx.xx.xxx:5601/app/kibana
 2.  Click "Visualize" on the top menu bar.  We'll start with a simple bar chart for now, so choose "Vertical Bar Chart".
