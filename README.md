@@ -17,66 +17,68 @@
     
 **3. Create an IBM Data Connect Instance**
 
-    Once logged into Bluemix, go to the Bluemix Catalog by clicking the Catalog button in the upper right  corner or going to bluemix.net/catalog 
-
-    In the catalog, type Data Connect into the search bar and click on the Data Connect service description. 
-
-    Ensure that the Data Connect pricing plan is set to Starter and click the Create button.  
-
-    On the service description page for your new Data Connect instance, click the Manage tab then click on the Launch button to launch the Data Connect dashboard. 
+>1. Once logged into Bluemix, go to the Bluemix Catalog by clicking the Catalog button in the upper right  corner or going to bluemix.net/catalog 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.48.55.png)
+>2. In the catalog, type Data Connect into the search bar and click on the Data Connect service description. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.49.31.png)
+>3. Ensure that the Data Connect pricing plan is set to Starter and click the Create button.  
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.50.55.png)
+>4. On the service description page for your new Data Connect instance, click the Manage tab then click on the Launch button to launch the Data Connect dashboard.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.54.41.png)
 
 **4. Replicate data normalization work in IBM Data Connect**
 
-    In the Data Connect dashboard, click on File Storage in the menu on the left side of the screen.
-
-    Upload the OneWorld Working Dataset file by clicking on the icon at the bottom of the screen then select your file from the explorer window and clicking Open. 
-
-    Once your data file is uploaded, click on Refine & Copy 
-
-    In the Refine & Copy screen, click on Files 
-
-    In Files, click on the file you just uploaded 
-
-    In Worksheets, check the box next to all worksheets you want to refine. As you select worksheets to refine, they will appear in the Selected column on the right side of the screen. 
-
-    Click the triple dots to right of your worksheet in the Selected column then click on the Configure button to perform an initial shaping of your data. 
-
-    The Configure window provides a preview of the data, and we notice that data starts at row 3 with data headings at row 2. To remedy this, we will click on Configure. Note: Data Connect automatically creates a unique ID for each data row.
-
-    Click OK in the resulting dialog. We haven't made any column changes yet so nothing will be lost.
-
-    In the next dialog, specify that data starts at row 2 by clicking on row 2, check Selected line is the header, then click Apply. 
-
-    In the next dialog, review that your data headers are correct then click Done.  
-
-    Click the Refine Data button in the upper right corner.  
-
-    In the Refine Data view, click Organize then click Change Schema
-
-    Remove the columns named COLUMN2, COLUMN5, and COLUMN11 by mousing over the column name and clicking on the trash can icon.                       
-
-    When you are done removing all 3 columns, click on Apply.                            
-
-    Begin editing the name for your activity by mousing over the activity name at the top of the screen (will probably say Untitled) and clicking on the pencil icon to the right. 
-
-    Provide a new name for the activity then click the checkmark button. 
-
-    Click the Next button in the upper right corner of the screen. 
-
-    In the next screen, click Files on the left side of the screen. 
-
-    Select JSON as the type of file to create. 
-
-    Click the Run button in the upper right corner of the screen. 
-
-    In the resulting screen, you will see your activity running.                       
-
-    When the word Running... disappears from your activity, the activity has completed.                           
-
-    Click on File Storage in the menu on the left side of the screen.
-
-    Your new JSON file should be listed in File Storage. Download it by mousing over the file name and clicking on the download icon.  This is the file you will load into Elasticsearch.
-
+>1. In the Data Connect dashboard, click on File Storage in the menu on the left side of the screen.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2019.59.58.png)
+>2. Upload the OneWorld Working Dataset file by clicking on the icon at the bottom of the screen then select your file from the explorer window and clicking Open. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.00.47.png)
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.02.23.png)
+>3. Once your data file is uploaded, click on Refine & Copy 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.02.56.png)
+>4. In the Refine & Copy screen, click on Files 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.03.21.png)
+>5. In Files, click on the file you just uploaded 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.05.44.png)
+>6. In Worksheets, check the box next to all worksheets you want to refine. As you select worksheets to refine, they will appear in the Selected column on the right side of the screen. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.05.00.png)
+>7. Click the triple dots to right of your worksheet in the Selected column then click on the Configure button to perform an initial shaping of your data. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.06.20.png)
+>8. The Configure window provides a preview of the data, and we notice that data starts at row 3 with data headings at row 2. To remedy this, we will click on Configure. Note: Data Connect automatically creates a unique ID for each data row.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.07.54.png)
+>9. Click OK in the resulting dialog. We haven't made any column changes yet so nothing will be lost.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.09.14.png)
+>10. In the next dialog, specify that data starts at row 2 by clicking on row 2, check Selected line is the header, then click Apply.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.12.39.png)
+>11. In the next dialog, review that your data headers are correct then click Done.  
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.16.50.png)
+>12. Click the Refine Data button in the upper right corner.  
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.18.08.png)
+>13. In the Refine Data view, click Organize then click Change Schema
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.20.26.png)
+>14. Remove the columns named COLUMN2, COLUMN5, and COLUMN11 by mousing over the column name and clicking on the trash can icon.                       
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.25.29.png)
+>15. When you are done removing all 3 columns, click on Apply.                            
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.26.33.png)
+>16. Begin editing the name for your activity by mousing over the activity name at the top of the screen (will probably say Untitled) and clicking on the pencil icon to the right. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.30.17.png)
+>17. Provide a new name for the activity then click the checkmark button. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.32.25.png)
+>18. Click the Next button in the upper right corner of the screen. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.33.04.png)
+>19. In the next screen, click Files on the left side of the screen. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.33.57.png)
+>20. Select JSON as the type of file to create. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.34.58.png)
+>21. Click the Run button in the upper right corner of the screen. 
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.36.59.png)
+>22. In the resulting screen, you will see your activity running.                       
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.38.07.png)
+>23. When the word Running... disappears from your activity, the activity has completed.                           
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.38.48.png)
+>24. Click on File Storage in the menu on the left side of the screen.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2019.59.58.png)
+>25. Your new JSON file should be listed in File Storage. Download it by mousing over the file name and clicking on the download icon.  This is the file you will load into Elasticsearch.
+![alt tag](/images/Box%20Notes%20Image%202017-03-28%2020.41.39.png)
 
 **5. Create Elasticsearch Instance on Bluemix**
 
